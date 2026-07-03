@@ -1,0 +1,30 @@
+diff --git a/CIE.MRTD.SDK/Util/ByteArray.cs b/CIE.MRTD.SDK/Util/ByteArray.cs
+--- a/CIE.MRTD.SDK/Util/ByteArray.cs
++++ b/CIE.MRTD.SDK/Util/ByteArray.cs
+@@
++using System.Security.Cryptography;
+@@
+-        static System.Random rnd = new Random();
++        static RandomNumberGenerator rnd = RandomNumberGenerator.Create();
+@@
+-            rnd.NextBytes(data);
++            rnd.GetBytes(data);
+
+diff --git a/CIE.MRTD.SDK/Crypto/DiffieHellmann.cs b/CIE.MRTD.SDK/Crypto/DiffieHellmann.cs
+--- a/CIE.MRTD.SDK/Crypto/DiffieHellmann.cs
++++ b/CIE.MRTD.SDK/Crypto/DiffieHellmann.cs
+@@
++using System.Security.Cryptography;
+@@
+-            Random rnd = new Random();
+-            for (int i = Prime.Size - 20; i < Prime.Size; i++)
+-            {
+-                privData[i] = (byte)(rnd.Next() % 256);
+-            }
+-            privData[Prime.Size - 20] = 1;
++            byte[] randomExponent = new byte[20];
++            using (RandomNumberGenerator rng = RandomNumberGenerator.Create())
++            {
++                rng.GetBytes(randomExponent);
++            }
++            Array.Copy(randomExponent, 0, privData, Prime.Size - randomExponent.Length, randomExponent.Length);

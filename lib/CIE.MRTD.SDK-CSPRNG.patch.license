@@ -1,0 +1,6 @@
+SPDX-FileCopyrightText: 2017 Developers Italia
+SPDX-FileCopyrightText: 2026 Simone D'Anna <dev@simonedanna.it>
+SPDX-License-Identifier: BSD-3-Clause
+
+This patch modifies BSD-3-Clause-licensed upstream source files. Its local
+changes are made available under the same BSD-3-Clause terms.

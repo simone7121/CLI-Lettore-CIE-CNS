@@ -1,0 +1,37 @@
+name: Richiesta funzionalità
+description: Proponi un miglioramento con impatti e casi d'uso.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema da risolvere
+      description: Descrivi il caso d'uso senza dati personali.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Soluzione proposta
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative considerate
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impatto su sicurezza e privacy
+      description: Considera PIN/CAN, APDU, rete, persistenza, dipendenze e output.
+    validations:
+      required: true
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Controllo dati
+      options:
+        - label: La richiesta non contiene dati personali o credenziali reali.
+          required: true

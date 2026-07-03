@@ -1,0 +1,22 @@
+# File locali e backup
+LettoreCNS_*copy*.ps1
+LettoreCNS_BAK.ps1
+*.bak
+*.tmp
+*.log
+*~
+
+# Installer di terze parti: usare link e checksum nelle release, non versionarli
+*.msi
+
+# Output potenzialmente sensibili
+output/
+exports/
+transcripts/
+
+# Editor e sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

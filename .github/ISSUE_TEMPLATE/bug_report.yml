@@ -1,0 +1,66 @@
+name: Segnalazione bug
+description: Segnala un comportamento riproducibile senza includere dati personali.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Non usare questo modulo per vulnerabilità. Non inserire dati del documento, PIN, PUK, CAN, certificati o dump APDU.
+  - type: input
+    id: version
+    attributes:
+      label: Versione o commit
+      placeholder: v1.0.0 oppure SHA del commit
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Versione Windows, PowerShell, modello lettore e versione driver.
+    validations:
+      required: true
+  - type: dropdown
+    id: document
+    attributes:
+      label: Percorso interessato
+      options:
+        - CNS / TS-CNS
+        - CIE MRTD
+        - CIE IAS
+        - Rilevamento lettore
+        - Avvio o dipendenze
+        - Altro
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passaggi per riprodurre
+      description: Usa esclusivamente dati sintetici o redatti.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento atteso
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento osservato
+      description: Riporta solo la parte non sensibile del messaggio.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Controllo dati
+      options:
+        - label: Ho rimosso dati personali, credenziali, certificati e identificativi della carta.
+          required: true
+        - label: Ho verificato che non si tratti di una vulnerabilità da segnalare privatamente.
+          required: true
