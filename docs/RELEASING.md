@@ -34,7 +34,7 @@ va sostituita prima del primo rilascio pubblico.
   `lib/CIE.MRTD.SDK-CSPRNG.patch`, oppure documentare commit e patch nuovi;
 - confrontare l'hash con `THIRD_PARTY_NOTICES.md` e con il workflow;
 - revisionare gli avvisi di sicurezza dell'SDK e del Middleware CIE;
-- non includere installer OpenSC, copie di lavoro, log o dati acquisiti.
+- non includere copie di lavoro, log o dati acquisiti.
 
 ## 4. Qualità e test
 

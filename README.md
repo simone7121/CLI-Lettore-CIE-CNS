@@ -1,5 +1,7 @@
 # Lettore CIE e CNS
 
+![Logo CLI Lettore CIE CNS](pics/LogoCLICIECNSOrizzontale.png)
+
 Utility PowerShell per Windows che rileva una CNS, una TS-CNS o una Carta
 d'Identità Elettronica e ne mostra a console i dati anagrafici disponibili.
 
@@ -33,9 +35,6 @@ di rete.
 - lettore contactless PC/SC compatibile ISO/IEC 14443 A/B per CIE;
 - per le CIE che espongono solo l'applicazione IAS, il
   [Middleware CIE ufficiale](https://www.cartaidentita.interno.gov.it/pa-e-imprese/documentazione-middleware-cie/).
-
-OpenSC non è una dipendenza del programma. Installarlo solo se richiesto dal
-produttore della carta o da un altro flusso applicativo.
 
 ## Installazione
 
